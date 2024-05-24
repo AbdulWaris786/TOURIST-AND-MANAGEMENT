@@ -1,0 +1,22 @@
+.logoImage{
+    height: 40px;
+    width: 45px;
+    position: absolute;
+    left:  350px;
+    top: 150px;
+}
+.CompanyName{
+    height: 40px;
+    width: 100px;
+    position: absolute;
+    left:  390px;
+    top: 160px;
+}
+.headOne{
+    font-size: 30px;
+    font-weight: bolder;
+    color: white;
+}
+.a{
+    color: rgb(129,65,203);
+}
