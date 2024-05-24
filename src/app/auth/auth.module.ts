@@ -1,11 +1,13 @@
 import { NgModule } from "@angular/core";
 import { SignupComponet } from "./components/signup/signup.component";
 import { MainComponent } from "./components/mainPage/main.component";
+import { LoginComponent } from "./components/login/login.Component";
 
 @NgModule({
     declarations:[
         SignupComponet,
-        MainComponent
+        MainComponent,
+        LoginComponent
     ],
     imports:[
 
@@ -15,7 +17,8 @@ import { MainComponent } from "./components/mainPage/main.component";
     ],
     exports:[
         SignupComponet,
-        MainComponent
+        MainComponent,
+        LoginComponent
     ]
 })
 
