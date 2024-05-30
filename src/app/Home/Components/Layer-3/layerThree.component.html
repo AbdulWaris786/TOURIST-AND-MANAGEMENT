@@ -1,0 +1,25 @@
+<!-- third layer of home page  -->
+<div class="h-[450px] w-[100%]  border-b-2 flex">
+    <!-- image  -->
+    <div class="h-[100%] w-[50%]">
+        <div class="h-[350px] w-[350px]  bg-white mx-[50%] rounded-full bg-globe-layer3-home bg-no-repeat bg-cover overflow-hidden py-[60px] px-[10px]">
+            <img src="/assets/images/home/layer-3-couple.png" alt="" class="overflow-hidden">
+        </div>
+    </div>
+    <!-- buttons and contents -->
+    <div class="h-[100%] w-[50%] px-[50px]">
+        <h1 class="text-[30px] font-bold">Why Choose Us</h1>
+        <p>Enjoy different experiences in every place you visit and <br>discover new and affordable adventures of course.</p>
+        <div class="h-[60px] w-[500px] flex rounded-[20px] my-[30px] hover:bg-white" *ngFor="let details of contents">
+            <div class="h-[100%] w-[80px] flex justify-center items-center">
+                <i class="{{details.icon}} text-[30px] text-[rgb(106,134,255)]"></i>
+            </div>
+            <div class="h-[100%] w-[420px] px-[5px]">
+                <p class="text-[20px] font-semibold">{{details.head}}</p>
+                <p>{{details.content}}</p>
+            </div>
+        </div>
+        <button class="hover:font-semibold">Another Product ></button>
+    </div>
+
+</div>

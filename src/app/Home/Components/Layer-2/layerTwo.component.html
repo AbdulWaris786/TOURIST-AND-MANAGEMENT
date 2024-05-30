@@ -1,0 +1,20 @@
+<!-- second layer in home page  -->
+<div class="h-[500px] w-[100%]">
+    <!-- heading part -->
+    <div class="px-[100px]">
+        <h1 class="text-[30px] font-extrabold text-[rgb(11,0,75)] ">Popular Destinations</h1>
+        <p class="text-[rgb(11,0,75)] text-[10pcx]">Vacations to make your experience enjoyable in Indonesia!</p>
+    </div>
+    <!-- cards -->
+    <div class="px-[100px] py-[50px] w-[100%] flex gap-[30px] ">
+        <div class="h-[260px] w-[250px] bg-[rgb(252,252,252)] py-[5px] px-[5px]" *ngFor="let details of cardDetails" >
+            <img src="{{details.image}}" alt="" class="w-[98%]">
+            <div class="px-[10px]">
+                <i class="fa-solid fa-location-dot">&nbsp;{{details.location}}</i>
+                <p>{{details.about}}</p>
+                <p>{{details.duration}}</p>
+                <p>{{details.price}}</p>
+            </div>
+        </div>
+    </div>
+</div> 

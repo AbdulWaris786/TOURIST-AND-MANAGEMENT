@@ -1,0 +1,11 @@
+.imageCircle{
+    height: 350px;
+    width: 300px;
+    position: absolute;
+    top: -50px;
+    border-radius: 0px 0px 100% 100%;
+    background-image: url(/assets/images/home/home-page-image1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index:2;
+}
