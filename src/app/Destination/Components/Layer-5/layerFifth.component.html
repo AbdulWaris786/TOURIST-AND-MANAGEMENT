@@ -1,0 +1,12 @@
+<div class="h-[500px] w-[100%] px-[100px]">
+    <h1 class="text-[40px] text-[rgb(38,80,115)] font-bold">Tour Guides</h1>
+    <div class="h-[300px] w-[100%] py-[50px] flex gap-5">
+        <div class="h-[270px] w-[250px] rounded-[10px]" *ngFor="let Details of  GuideDetails">
+            <img src="{{Details.image}}" alt="" class="h-[180px] w-[280px] rounded-l-full">
+            <div class="">
+                <p class="text-[20px] font-semibold px-[10px]">{{Details.name}}</p>
+                <p class="px-[10px]">{{Details.postion}}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<div class="h-[300px] w-[100%] px-[250px] py-[50px] flex gap-9">
+    <div class="h-[200px] w-[300px] bg-white text-center py-[20px]" *ngFor="let details of contentDetails">
+        <i class="{{details.icon}} text-[35px]"></i><br>
+        <p class="text-[15px] font-semibold">{{details.head}}</p><br>  
+        <p class="text-[10px]">{{details.content}}</p>
+    </div>
+</div>

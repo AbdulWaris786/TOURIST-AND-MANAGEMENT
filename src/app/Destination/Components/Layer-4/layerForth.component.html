@@ -1,0 +1,17 @@
+<div class="h-[650px] w-[100%] px-[100px] my-[100px]">
+    <h1 class="font-bold text-[40px] text-[rgb(38,80,115)]">Our Signature Packages</h1><br><br>
+    <div class="h-[500px] w-[100%] flex flex-wrap gap-[0.5%] ">
+        <div class="h-[40%] w-[12%] bg-white rounded-[10px] " *ngFor="let details of packages">
+            <img src="{{details.image}}" alt="" class="h-[100px] w-[140px] my-[10px] mx-[10px] rounded-[10px]">
+            <p class="px-[10px] font-semibold">{{details.place}}</p>
+            <p class="px-[10px] text-[12px]">{{details.days}}</p>
+            <div class="flex items-center pl-[10px]">
+                <i class="fa-solid fa-location-dot text-[15px] pt-1"></i>
+                <p class="px-[5px]">{{details.location}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="h-[50px] w-[100%] flex justify-center">
+        <button class="h-[50px] w-[400px] bg-[rgb(38,80,115)] text-white rounded-[10px] font-semibold">Explore All Packages &nbsp;<i class="fa-regular fa-circle-right"></i></button>
+    </div>
+</div>
