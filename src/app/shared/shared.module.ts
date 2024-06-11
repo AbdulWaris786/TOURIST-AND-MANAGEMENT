@@ -2,10 +2,11 @@ import { NgModule } from "@angular/core";
 import { HeaderComponent } from "./Components/Header/header.component";
 import { BrowserModule } from "@angular/platform-browser";
 import { FooterComponent } from "./Components/Footer/footer.component";
-
+import { RouterModule } from "@angular/router";
 @NgModule({
     imports:[
-        BrowserModule
+        BrowserModule,
+        RouterModule
     ],
     exports:[
         HeaderComponent,
@@ -13,7 +14,7 @@ import { FooterComponent } from "./Components/Footer/footer.component";
     ],
     declarations:[
         HeaderComponent,
-        FooterComponent
+        FooterComponent,
     ]
 })
  export class SharedModule{}

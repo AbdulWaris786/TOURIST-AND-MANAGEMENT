@@ -1,24 +1,24 @@
 import { NgModule } from "@angular/core";
 import { SignupComponet } from "./components/signup/signup.component";
-import { MainComponent } from "./components/mainPage/main.component";
 import { LoginComponent } from "./components/login/login.Component";
+import { authRoutingModule } from "./auth-routing.module";
+import { MainComponent } from "./mainPage/main.component";
 
 @NgModule({
     declarations:[
         SignupComponet,
-        MainComponent,
-        LoginComponent
+        LoginComponent,
+        MainComponent
     ],
     imports:[
-
+        authRoutingModule,
     ],
     providers:[
 
     ],
     exports:[
         SignupComponet,
-        MainComponent,
-        LoginComponent
+        LoginComponent,
     ]
 })
 

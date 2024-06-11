@@ -7,6 +7,8 @@ import { AuthModule } from './auth/auth.module';
 import { HomeModule } from './Home/home.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DestinationModule } from './Destination/destination.module';
+import { authRoutingModule } from './auth/auth-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -15,10 +17,10 @@ import { DestinationModule } from './Destination/destination.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AuthModule,
     HomeModule,
     ReactiveFormsModule,
-    DestinationModule
+    DestinationModule,
+    authRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
