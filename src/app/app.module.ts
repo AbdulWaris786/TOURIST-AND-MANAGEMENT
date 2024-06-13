@@ -3,11 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AuthModule } from './auth/auth.module';
 import { HomeModule } from './Home/home.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DestinationModule } from './Destination/destination.module';
 import { authRoutingModule } from './auth/auth-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -21,6 +21,7 @@ import { authRoutingModule } from './auth/auth-routing.module';
     ReactiveFormsModule,
     DestinationModule,
     authRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

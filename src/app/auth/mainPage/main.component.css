@@ -40,27 +40,6 @@
         width: 100%;
     }
 }
-/* @media (max-width: 451px) {
-    .condier {
-        width: 450px;
-        flex-direction: column;
-        display: none;
-    }
-
-    .boxOne {
-        display: none;
-    }
-
-    .boxTow {
-        width: 100%;
-        height: 100%;
-        padding-left: 0;
-    }
-
-    .image {
-        width: 100%;
-    }
-} */
 .condier{
     background-color: black ;
     height: 100vh;
