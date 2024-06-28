@@ -3,19 +3,24 @@ import { SignupComponet } from "./components/signup/signup.component";
 import { LoginComponent } from "./components/login/login.Component";
 import { authRoutingModule } from "./auth-routing.module";
 import { MainComponent } from "./mainPage/main.component";
-import { ReactiveFormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { OtpComponent } from "./components/Otp/otp.component";
+import { CommonModule } from "@angular/common";
 
 @NgModule({
     declarations:[
         SignupComponet,
         LoginComponent,
-        MainComponent
+        MainComponent,
+        OtpComponent
     ],
     imports:[
+        CommonModule,
         authRoutingModule,
         ReactiveFormsModule,
-        HttpClientModule
+        HttpClientModule,
+        FormsModule
     ],
     providers:[
 
@@ -23,6 +28,7 @@ import { HttpClientModule } from "@angular/common/http";
     exports:[
         SignupComponet,
         LoginComponent,
+        OtpComponent,
         ReactiveFormsModule
     ]
 })

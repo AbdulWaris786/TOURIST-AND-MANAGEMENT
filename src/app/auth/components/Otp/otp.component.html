@@ -1,0 +1,21 @@
+<h1 class="HeadOne">O T P</h1>
+<p  class="text-[15px] mb-[30px] text-white">Email Verification</p>
+<p class="text-[10px] mb-[30px] text-white" id="EmailVerification"></p>
+
+<form [formGroup]="otpForm" (ngSubmit)="onOtp()">
+    <div class="otp-inputs">
+      <input type="text" #otp1 formControlName="otp1" (input)="autoInputChange(otp1,otp2)"  class="h-[50px] w-[50px] text-[30px] text-center bg-[rgb(38,16,70)] text-white " maxlength="1" pattern="[0-9]" required>
+      <input type="text" #otp2 formControlName="otp2" (input)="autoInputChange(otp2,otp3)"  class="h-[50px] w-[50px] text-[30px] text-center bg-[rgb(38,16,70)] text-white " maxlength="1" pattern="[0-9]" required>
+      <input type="text" #otp3 formControlName="otp3" (input)="autoInputChange(otp3,otp4)"  class="h-[50px] w-[50px] text-[30px] text-center bg-[rgb(38,16,70)] text-white " maxlength="1" pattern="[0-9]" required>
+      <input type="text" #otp4 formControlName="otp4" (input)="autoInputChange(otp4,otp5)"  class="h-[50px] w-[50px] text-[30px] text-center bg-[rgb(38,16,70)] text-white " maxlength="1" pattern="[0-9]" required>
+      <input type="text" #otp5 formControlName="otp5" (input)="autoInputChange(otp5,otp6)"  class="h-[50px] w-[50px] text-[30px] text-center bg-[rgb(38,16,70)] text-white " maxlength="1" pattern="[0-9]" required>
+      <input type="text" #otp6 formControlName="otp6" (input)="autoInputChange(otp6,null)"  class="h-[50px] w-[50px] text-[30px] text-center bg-[rgb(38,16,70)] text-white " maxlength="1" pattern="[0-9]" required>
+    </div><br>
+    <div *ngIf="timeLeft" class="text-[15px] mb-[30px] text-white">Time left: {{timeLeft}} seconds</div>
+    <div class="px-[25px]">
+        <button type="button" class="btn" (click)="resend()" *ngIf="!canVerify">Resend</button>
+        <br>
+        <button type="submit" class="btn" [disabled]="canVerify">Verify</button>
+    </div>
+  </form>
+  

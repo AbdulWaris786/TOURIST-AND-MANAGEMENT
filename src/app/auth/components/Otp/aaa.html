@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OTP Verification</title>
+  <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+   <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+}
+
+.otp-inputs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.otp-inputs input {
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  text-align: center;
+  font-size: 24px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.otp-inputs input:focus {
+  border-color: #4CAF50;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+   </style>
+</head>
+<body>
+    <div class="container">
+      <h2>OTP Verification</h2>
+      <p>Please enter the OTP sent to your registered email or mobile number:</p>
+      <form>
+        <div class="otp-inputs">
+          <input type="text" class="h-[50px] w-[50px] text-[40px] text-center" maxlength="1" pattern="[0-9]" required>
+          <input type="text" class="h-[50px] w-[50px] text-[40px] text-center" maxlength="1" pattern="[0-9]" required>
+          <input type="text" class="h-[50px] w-[50px] text-[40px] text-center" maxlength="1" pattern="[0-9]" required>
+          <input type="text" class="h-[50px] w-[50px] text-[40px] text-center" maxlength="1" pattern="[0-9]" required>
+          <input type="text" class="h-[50px] w-[50px] text-[40px] text-center" maxlength="1" pattern="[0-9]" required>
+          <input type="text" class="h-[50px] w-[50px] text-[40px] text-center" maxlength="1" pattern="[0-9]" required>
+        </div>
+        <button type="submit">Verify</button>
+      </form>
+    </div>
+  
+    <!-- <script src="script.js"></script> -->
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+  const inputs = document.querySelectorAll('.otp-inputs input');
+
+  inputs.forEach(function(input, index) {
+    input.addEventListener('input', function() {
+      if (input.value.length === input.maxLength) {
+        if (index < inputs.length - 1) {
+          inputs[index + 1].focus();
+        } else {
+          input.blur();
+        }
+      }
+    });
+
+    input.addEventListener('keydown', function(event) {
+      if (event.key === 'Backspace' && input.value.length === 0) {
+        if (index > 0) {
+          inputs[index - 1].focus();
+        }
+      }
+    });
+  });
+});
+     </script>
+  </body>
+</html>

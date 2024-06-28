@@ -1,20 +1,20 @@
 <div class="boxTwo">
     <h1 class="HeadOne">SignUp</h1>
-<p  class="text-[10px] mb-[30px] text-white" id="EmailVerification">Sign up with email address</p>
+<p class="text-[10px] mb-[30px] text-white" id="EmailVerification">Sign up with email address</p>
 <form [formGroup]="signupForm" (ngSubmit)="onSignup()">
     <div class="inputtag">
         <i class="fa-solid fa-envelope b"></i>
-        <input type="email" placeholder="yourname@gmail.com" class="bg-transparent w-[100%] px-[5px]" formControlName="email" required email>
+        <input type="email" placeholder="yourname@gmail.com" class="bg-transparent  w-[100%] px-[5px] outline-none" formControlName="email" required email>
     </div>
     <br>
     <div class="inputtag"> 
         <i class="fa-solid fa-lock b"></i>
-        <input type="password" placeholder="Password" class="bg-transparent w-[100%] px-[5px]" formControlName="password">
+        <input type="password" placeholder="Password" class="bg-transparent w-[100%] px-[5px] outline-none" formControlName="password">
     </div>
     <br>
     <div class="inputtag">
         <i class="fa-solid fa-lock b"></i>
-        <input type="password" placeholder="Confirm Password" class="bg-transparent w-[100%] px-[5px]" formControlName="confirmpassword">
+        <input type="password" placeholder="Confirm Password" class="bg-transparent w-[100%] px-[5px] outline-none" formControlName="confirmpassword">
     </div>
     <br>
     <div class="btn">

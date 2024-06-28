@@ -3,6 +3,7 @@ import { LoginComponent } from "./components/login/login.Component";
 import { SignupComponet } from "./components/signup/signup.component";
 import { NgModule } from "@angular/core";
 import { MainComponent } from "./mainPage/main.component";
+import { OtpComponent } from "./components/Otp/otp.component";
 
 const routes :Routes=[
     {
@@ -16,6 +17,14 @@ const routes :Routes=[
             {
                 path: 'signup',
                 component: SignupComponet
+            },
+            {
+                path:'otp',
+                component:OtpComponent
+            },
+            {
+                path:'resendOtp',
+                component:OtpComponent
             }
         ]
     }

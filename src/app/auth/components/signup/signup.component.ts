@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { FormBuilder, FormGroup, ValidationErrors, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 import { UserService } from "src/app/service/user.service";
+import { DataSharingService } from "../service/userData.service";
 
 @Component({
     selector:'app-SignupPage',
@@ -10,7 +11,7 @@ import { UserService } from "src/app/service/user.service";
 })
 export class SignupComponet{
     signupForm!:FormGroup
-    constructor(private fb :FormBuilder, private UserService:UserService,private route:Router){
+    constructor(private fb :FormBuilder, private UserService:UserService,private route:Router,private UserDataService:DataSharingService){
         this.signupForm= this.fb.group({
             email:['',[Validators.required,Validators.email]],
             password:['',[Validators.required,Validators.minLength(8)]],
@@ -52,11 +53,12 @@ export class SignupComponet{
         }else{
             this.UserService.signup(this.datas).subscribe({
                 next:(res: any)=>{
-                    if(res.dataOtp){
-                        this.route.navigate(['/login'])
+                    if(res.OtpEmail){
+                        const email = res.OtpEmail
+                        this.UserDataService.setData(email)
+                        this.route.navigate(['/otp'])
                     }else{
-                        this.route.navigate([''])
-                        
+                        this.route.navigate(['/login'])
                     }
                     
                 }
