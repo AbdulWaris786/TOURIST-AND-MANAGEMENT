@@ -66,7 +66,7 @@ export class OtpComponent implements OnInit, OnDestroy {
     this.timeLeft = 5;
     // this.canVerify = true;
     this.timerSubscription = interval(1000)
-      .pipe(take(6))
+      .pipe(take(31))
       .subscribe(() => {
         if (this.timeLeft > 0) {
           this.timeLeft--;

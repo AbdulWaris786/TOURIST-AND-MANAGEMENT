@@ -9,7 +9,11 @@
     <br>
     <div class="inputtag"> 
         <i class="fa-solid fa-lock b"></i>
-        <input type="password" placeholder="Password" class="bg-transparent w-[100%] px-[5px] outline-none" formControlName="password">
+        <input type="{{ passwordType }}" placeholder="Password" class="bg-transparent w-[100%] px-[5px] outline-none" formControlName="password">
+        <span (click)="togglePasswordVisibility()"
+            class="material-icons"
+            [ngClass]="{ 'visibility': !isPasswordVisible, 'visibility_off': isPasswordVisible }" class="cursor-pointer">👁️
+        </span>
     </div>
     <br>
     <div class="inputtag">

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, ElementRef, ViewChild } from "@angular/core";
 import { FormBuilder, FormGroup, ValidationErrors, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 import { UserService } from "src/app/service/user.service";
@@ -10,6 +10,13 @@ import { DataSharingService } from "../service/userData.service";
     styleUrls:['./signup.component.css']
 })
 export class SignupComponet{
+    @ViewChild('passwordInput') passwordInput! : ElementRef<HTMLInputElement>;
+    passwordType:string ='password'
+    isPasswordVisible:boolean = false
+    togglePasswordVisibility() {
+        this.isPasswordVisible = !this.isPasswordVisible;
+        this.passwordType = this.isPasswordVisible ? 'text' : 'password';
+    }
     signupForm!:FormGroup
     constructor(private fb :FormBuilder, private UserService:UserService,private route:Router,private UserDataService:DataSharingService){
         this.signupForm= this.fb.group({
@@ -67,4 +74,5 @@ export class SignupComponet{
         
         
     }
+    
 }
