@@ -1,21 +1,23 @@
 <h1 class="HeadOne">Sign In</h1>
-<p  class="text-[10px] mb-[30px] text-white">Sign in with email address</p>
+<p  class="text-[10px] mb-[30px] text-white" id="EmailVerification" >Sign in with email address</p>
+<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
 <div class="inputtag">
     <i class="fa-solid fa-envelope b"></i>
-    <input type="email" placeholder="yourname@gmail.com" class="bg-transparent w-[100%] px-[5px] outline-none">
+    <input type="email" placeholder="yourname@gmail.com" class="bg-transparent w-[100%] px-[5px] outline-none" formControlName="email" required>
 </div>
 <br>
-<div class="inputtag">
-    <i class="fa-solid fa-lock b"></i>
-    <input type="{{ passwordType }}" placeholder="Password" class="bg-transparent w-[100%] px-[5px] outline-none">
-    <span (click)="togglePasswordVisibility()"
-    class="material-icons"
-    [ngClass]="{ 'visibility': !isPasswordVisible, 'visibility_off': isPasswordVisible }" class="cursor-pointer">👁️</span>
-</div>
-<br>
-<div class="btn">
-    <button>Sign Up</button>
-</div>
+    <div class="inputtag">
+        <i class="fa-solid fa-lock b"></i>
+        <input type="{{ passwordType }}" placeholder="Password" class="bg-transparent w-[100%] px-[5px] outline-none" formControlName="password" required>
+        <span (click)="togglePasswordVisibility()"
+        class="material-icons"
+        [ngClass]="{ 'visibility': !isPasswordVisible, 'visibility_off': isPasswordVisible }" class="cursor-pointer">👁️</span>
+    </div>
+    <br>
+    <div class="btn">
+        <button>Continue</button>
+    </div>
+</form>
 <hr class="w-[300px] my-[10px]">
 <p class="text-[10px] my-[5px] text-white">Continue with</p>
 <div class="btns">
@@ -29,3 +31,4 @@
     </div>
 </div>
 <p class="text-[10px] my-[10px] text-white">By registering you with our Terms and Conditions</p>
+<a href="/signup" class="btn">Create Account</a>

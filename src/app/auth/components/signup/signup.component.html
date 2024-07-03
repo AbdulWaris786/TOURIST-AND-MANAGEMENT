@@ -4,7 +4,7 @@
 <form [formGroup]="signupForm" (ngSubmit)="onSignup()">
     <div class="inputtag">
         <i class="fa-solid fa-envelope b"></i>
-        <input type="email" placeholder="yourname@gmail.com" class="bg-transparent  w-[100%] px-[5px] outline-none" formControlName="email" required email>
+        <input type="email" placeholder="yourname@gmail.com" class="bg-transparent  w-[100%] px-[5px] outline-none" formControlName="email" required>
     </div>
     <br>
     <div class="inputtag"> 
@@ -22,7 +22,7 @@
     </div>
     <br>
     <div class="btn">
-        <button type="submit">Sign Up</button>
+        <button type="submit">Continue</button>
     </div>
 </form>
 <hr class="w-[300px] my-[10px]">
@@ -38,5 +38,5 @@
     </div>
 </div>
 <p class="text-[10px] my-[10px] text-white">By registering you with our Terms and Conditions</p>
-
+<a href="/login" class="btn">ALREADY REGISTERED?</a>
 </div>

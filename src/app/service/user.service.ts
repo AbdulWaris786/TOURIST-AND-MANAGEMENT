@@ -17,4 +17,7 @@ export class UserService{
     resentOtp(email:string){
         return this.http.post('http://localhost:7000/resendOtp',{email})
     }
+    login(data:any){
+        return this.http.post('http://localhost:7000/login',data)
+    }
 }
