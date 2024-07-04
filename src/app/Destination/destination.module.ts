@@ -21,7 +21,7 @@ import { DestinationLayerFifthComponent } from "./Components/Layer-5/layerFifth.
     imports:[
         SharedModule,
         ReactiveFormsModule,
-        BrowserModule
+        BrowserModule,
     ],
     exports:[
         DestinationMainPage,

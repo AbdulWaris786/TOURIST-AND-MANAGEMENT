@@ -5,11 +5,11 @@
         <img src="/assets/images/companyName.png" alt="" class="h-[80%] pr-[200px]">
     </div>
     <div class="flex h-[100%] w-[60%]  py-[10px] gap-[100px] font-extrabold text-[rgb(11,0,75)] !important">
-        <h3 routerLink="/">Home</h3>
-        <h3 routerLink="Destination">Destination</h3>
-        <h3>Hotels</h3>
-        <h3>Packages</h3>
-        <h3>Guids</h3>
-        <a routerLink="signup">Signup</a>
+        <h3 routerLink="/" class="cursor-pointer">Home</h3>
+        <h3 routerLink="Destination" class="cursor-pointer">Destination</h3>
+        <h3 class="cursor-pointer">Hotels</h3>
+        <h3 class="cursor-pointer">Packages</h3>
+        <h3 class="cursor-pointer">Guids</h3>
+        <a routerLink="/signup" id="signupButton" class="cursor-pointer" (click)="logoutBtn()">Signup</a>
     </div>
 </div>

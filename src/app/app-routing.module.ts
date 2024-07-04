@@ -9,13 +9,13 @@ const routes: Routes = [
     component:MainPageComnponent
   },
   {
+    path: '',
+    loadChildren: async () => (await import('./auth/auth.module')).AuthModule
+  },
+  {
     path:'Destination',
     component:DestinationMainPage
   },
-  {
-    path: 'user',
-    loadChildren: async () => (await import('./auth/auth.module')).AuthModule
-  }
 ];
 
 @NgModule({
