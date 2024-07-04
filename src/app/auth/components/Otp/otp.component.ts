@@ -63,7 +63,7 @@ export class OtpComponent implements OnInit, OnDestroy {
   }
 
   startTimer() {
-    this.timeLeft = 5;
+    this.timeLeft = 30;
     // this.canVerify = true;
     this.timerSubscription = interval(1000)
       .pipe(take(31))
@@ -71,7 +71,6 @@ export class OtpComponent implements OnInit, OnDestroy {
         if (this.timeLeft > 0) {
           this.timeLeft--;
         } else{
-            console.log(this.canVerify);
             this.canVerify = false;
             
             this.timerSubscription.unsubscribe();
@@ -83,7 +82,6 @@ export class OtpComponent implements OnInit, OnDestroy {
   resend() {
     this.userService.resentOtp(this.userEmail).subscribe({
       next: (res: any) => {
-        console.log('OTP Resent successfully');
         this.startTimer();
       },
       error: (err: any) => {
@@ -96,10 +94,7 @@ export class OtpComponent implements OnInit, OnDestroy {
     this.otpCode = this.otpForm.value;
     const { otp1, otp2, otp3, otp4, otp5, otp6 } = this.otpCode;
     if (!otp1 || !otp2 || !otp3 || !otp4 || !otp5 || !otp6) {
-      const errorInEmail = document.getElementById('EmailVerification');
-      errorInEmail!.textContent = 'Enter Correct OTP';
-      errorInEmail!.style.color = 'red';
-      errorInEmail!.style.fontSize = '15px';
+      this.ShowError('Enter Valid OTP');
     } else {
       this.userService.OtpVerification(this.otpCode, this.userEmail).subscribe({
         next: (res: any) => {
@@ -113,6 +108,14 @@ export class OtpComponent implements OnInit, OnDestroy {
           console.error('OTP Verification Failed', err);
         }
       });
+    }
+  }
+  private ShowError(message:string){
+    const errorInEmail = document.getElementById('EmailVerification')
+    if(errorInEmail){
+        errorInEmail.textContent = message;
+        errorInEmail.style.color = 'red';
+        errorInEmail.style.fontSize = '15px';
     }
   }
 }

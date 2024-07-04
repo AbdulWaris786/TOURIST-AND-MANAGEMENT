@@ -30,23 +30,28 @@ export class LoginComponent {
         this.data = this.loginForm.value
         const {email,password}= this.data 
         if(!email){
-            const errorInEmail = document.getElementById('EmailVerification')
-            errorInEmail!.textContent ='Enter Valid Email'
-            errorInEmail!.style.color = 'red'
-            errorInEmail!.style.fontSize ='15px'
+            this.ShowError('Enter Valid Email');
         }else if(!password){
-            const errorInEmail = document.getElementById('EmailVerification')
-            errorInEmail!.textContent ='Password Incorrect'
-            errorInEmail!.style.color = 'red'
-            errorInEmail!.style.fontSize ='15px'
+            this.ShowError('Password Incorrect');
         }else{
             
             this.userService.login(this.data).subscribe({
                 
                 next:(res:any)=>{
                     this.router.navigate(['/']) 
+                },
+                error:(err)=>{
+                    this.ShowError(err.error.message || 'Login failed');
                 }
             })
+        }
+    }
+    private ShowError(message:string){
+        const errorInEmail = document.getElementById('EmailVerification')
+        if(errorInEmail){
+            errorInEmail.textContent = message;
+            errorInEmail.style.color = 'red';
+            errorInEmail.style.fontSize = '15px';
         }
     }
     

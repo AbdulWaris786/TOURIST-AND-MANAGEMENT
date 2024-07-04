@@ -40,23 +40,13 @@ export class SignupComponet{
             const {email,password,confirmpassword}= this.datas
                 
         if(!email){
-            const errorInEmail = document.getElementById('EmailVerification')
-            errorInEmail!.textContent ='Enter Full Details'
-            errorInEmail!.style.color = 'red'
-            errorInEmail!.style.fontSize ='15px'
+            this.ShowError('Enter Valid Email');
         }else if(!password){
-            const errorInEmail = document.getElementById('EmailVerification')
-            errorInEmail!.textContent ='Enter Full Details'
-            errorInEmail!.style.color = 'red'
-            errorInEmail!.style.fontSize ='15px'
+            this.ShowError('Enter Valid Password');
         }else if(!confirmpassword){
-            const errorInEmail = document.getElementById('EmailVerification')
-            errorInEmail!.textContent ='Enter Full Details'
+            this.ShowError('Enter Valid confirmpassword');
         }else if(password !== confirmpassword){
-            const errorInEmail = document.getElementById('EmailVerification')
-            errorInEmail!.textContent ='Password mismatch'
-            errorInEmail!.style.color = 'red'
-            errorInEmail!.style.fontSize ='15px'
+            this.ShowError('Mismatch Password');
         }else{
             this.UserService.signup(this.datas).subscribe({
                 next:(res: any)=>{
@@ -73,6 +63,14 @@ export class SignupComponet{
         }
         
         
+    }
+    private ShowError(message:string){
+        const errorInEmail = document.getElementById('EmailVerification')
+        if(errorInEmail){
+            errorInEmail.textContent = message;
+            errorInEmail.style.color = 'red';
+            errorInEmail.style.fontSize = '15px';
+        }
     }
     
 }
