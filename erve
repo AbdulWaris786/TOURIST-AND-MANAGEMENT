@@ -1,0 +1,89 @@
+[33mcommit 9d78e33083628dc28729d14432ff5b8564e3d22d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: abdul waris <warismuthuparamba@gmail.com>
+Date:   Thu Jul 4 15:28:18 2024 +0530
+
+    user can logout page
+
+[33mcommit a74e01fb0ab528e03274ad911632dbd9fe89c2d1[m
+Author: abdul waris <warismuthuparamba@gmail.com>
+Date:   Thu Jul 4 12:48:40 2024 +0530
+
+    JWT token applied
+
+[33mcommit 66acd32a2bbcc5a08d19c2e7ccf3527bd44e0a62[m
+Author: abdul waris <warismuthuparamba@gmail.com>
+Date:   Wed Jul 3 10:45:30 2024 +0530
+
+    User Login Successfully
+
+[33mcommit 09fe21a009f7268e19df02325b435a1954e9999b[m
+Author: abdul waris <warismuthuparamba@gmail.com>
+Date:   Fri Jun 28 20:12:37 2024 +0530
+
+    password will show click the button of eye
+
+[33mcommit 92645875202ae3a64d496f6dabb47b253cc40c40[m
+Author: abdul waris <warismuthuparamba@gmail.com>
+Date:   Fri Jun 28 19:49:00 2024 +0530
+
+    Resent otp
+
+[33mcommit 811f51af52e6ed5ff3cb9b412016cef428bc4ff0[m
+Author: abdul waris <warismuthuparamba@gmail.com>
+Date:   Thu Jun 13 19:17:46 2024 +0530
+
+    User Signup completed
+
+[33mcommit 8a96e04e178b904b99e79f4e02e1b01dbdc25ac5[m
+Author: abdul waris <warismuthuparamba@gmail.com>
+Date:   Tue Jun 11 21:07:42 2024 +0530
+
+    give routing
+
+[33mcommit 73ec90a0475dcdb0e23e57a08b01c27ea286db55[m
+Author: abdul waris <warismuthuparamba@gmail.com>
+Date:   Mon Jun 10 11:21:49 2024 +0530
+
+    Destination page UI completed
+
+[33mcommit 6653839b838cf65d4d5839bf741a627ac32f8c86[m
+Author: abdul waris <warismuthuparamba@gmail.com>
+Date:   Fri May 31 12:15:49 2024 +0530
+
+    Shared module added
+
+[33mcommit 29c7ab59eba47cc2600feb6dead113004bddac18[m
+Author: abdul waris <warismuthuparamba@gmail.com>
+Date:   Thu May 30 19:34:11 2024 +0530
+
+    Mian Home Page Is Completed
+
+[33mcommit 7d4e5f8a552d5feed5069517f3098fa97a9e2930[m
+Author: abdul waris <warismuthuparamba@gmail.com>
+Date:   Fri May 24 18:50:45 2024 +0530
+
+    LoginPage and SignUppage are Responsive
+
+[33mcommit b0f8ce26c564fde5fdb6ace228e388efe56bb755[m
+Author: abdul waris <warismuthuparamba@gmail.com>
+Date:   Fri May 24 12:29:47 2024 +0530
+
+    Login page disign completed
+
+[33mcommit 9f0e5df59d3cbb44a38b1eb34a73a7292d8ee427[m
+Author: abdul waris <warismuthuparamba@gmail.com>
+Date:   Fri May 24 12:17:41 2024 +0530
+
+    Signup page disign completed
+
+[33mcommit d16233b3bbf0167f958d1f5451560649d43c5230[m
+Author: abdul waris <warismuthuparamba@gmail.com>
+Date:   Thu May 23 15:05:31 2024 +0530
+
+    created project
+
+[33mcommit 4f13b5d5b352e48a9f83ce7135a39a87f4cde3ec[m
+Author: abdul waris <warismuthuparamba@gmail.com>
+Date:   Wed May 22 12:59:50 2024 +0530
+
+    initial commit

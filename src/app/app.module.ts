@@ -9,6 +9,8 @@ import { DestinationModule } from './Destination/destination.module';
 import { authRoutingModule } from './auth/auth-routing.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './http.interceptor/http.interceptor';
+import { FormsModulesComponent } from './forms/forms.module';
+import { FormsRoutingModule } from './forms/forms.routing.module';
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { AuthInterceptor } from './http.interceptor/http.interceptor';
     DestinationModule,
     authRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FormsRoutingModule
   ],
   providers: [
     {provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true}

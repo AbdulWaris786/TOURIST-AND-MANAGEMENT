@@ -17,7 +17,6 @@ export class UserService{
         return this.http.post('http://localhost:7000/signup',data)
     }
     OtpVerification(data:any,email:string){
-        console.log(data,'jj');
         return this.http.post('http://localhost:7000/otp',{data,email})
     }
     resentOtp(email:string){
